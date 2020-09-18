@@ -26,6 +26,6 @@ struct ListCell: View {
 
 struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ListCell(listComponent: ListComponent(id: 1, login: "Potonho", avatar_url: "https://avatars2.githubusercontent.com/u/2460641?v=4", score: 1000))
+        ListCell(listComponent: ListComponent.getDefaultListComponent())
     }
 }

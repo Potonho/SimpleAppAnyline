@@ -15,36 +15,40 @@ struct ContentView: View {
     @State private var showSearchBar = false
     
     var body: some View {
-        VStack {
-            if showSearchBar {
-                ListSearchBar(text: $searchName, onSearchButtonClicked: requestNewSearch)
-            }
-            NavigationView() {
-                List(request.listOfComponents, id: \.id) { listComponent in
-                    ListCell(listComponent: listComponent)
-                    }.navigationBarTitle(Text(searchName), displayMode: .inline)
-                    .navigationBarItems(leading:
-                        Button(action: animateSearchBar, label: {
-                            Text("New Search")
-                        }),
-                                        trailing:
-                        Button(action: requestNewSearch, label: {
-                            Text("Refresh")
-                        })
-                    )
-                
-            }
-            HStack() {
-                Button(action: sortList) {
-                    Text("SORT")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                        .foregroundColor(Color.white)
-                        .font(.title)
+        NavigationView() {
+            VStack {
+                if showSearchBar {
+                    ListSearchBar(text: $searchName, onSearchButtonClicked: requestNewSearch)
                 }
-                .background(Color.gray)
-                .frame(height: 44)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .padding(10)
+                
+                List(request.listOfComponents, id: \.id) { listComponent in
+                    NavigationLink(destination: DetailView(userData: listComponent)) {
+                        ListCell(listComponent: listComponent)
+                    }
+                }.navigationBarTitle(Text(searchName), displayMode: .inline)
+                .navigationBarItems(leading:
+                                        Button(action: animateSearchBar, label: {
+                                            Text("New Search")
+                                        }),
+                                    trailing:
+                                        Button(action: requestNewSearch, label: {
+                                            Text("Refresh")
+                                        })
+                )
+                
+                
+//                HStack() {
+//                    Button(action: sortList) {
+//                        Text("SORT")
+//                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//                            .foregroundColor(Color.white)
+//                            .font(.title)
+//                    }
+//                    .background(Color.gray)
+//                    .frame(height: 44)
+//                    .frame(minWidth: 0, maxWidth: .infinity)
+//                    .padding(10)
+//                }
             }
         }
     }
