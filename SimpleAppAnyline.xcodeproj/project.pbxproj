@@ -15,6 +15,14 @@
 		D896BA2F2513809C00DC50AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896BA2D2513809C00DC50AB /* LaunchScreen.storyboard */; };
 		D896BA3A2513809C00DC50AB /* SimpleAppAnylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA392513809C00DC50AB /* SimpleAppAnylineTests.swift */; };
 		D896BA452513809C00DC50AB /* SimpleAppAnylineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA442513809C00DC50AB /* SimpleAppAnylineUITests.swift */; };
+		D896BA7B251393D800DC50AB /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA7A251393D800DC50AB /* URLImage.swift */; };
+		D896BA842513941E00DC50AB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA832513941E00DC50AB /* ImageLoader.swift */; };
+		D896BA8C2513943900DC50AB /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA8B2513943900DC50AB /* URLBuilder.swift */; };
+		D896BA912513A61300DC50AB /* ListSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA902513A61300DC50AB /* ListSearchBar.swift */; };
+		D896BA972513A64C00DC50AB /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA962513A64C00DC50AB /* ListModel.swift */; };
+		D896BA9F2513ABFF00DC50AB /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA9E2513ABFF00DC50AB /* ListCell.swift */; };
+		D896BAA42513B1F600DC50AB /* RequestUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BAA32513B1F600DC50AB /* RequestUsers.swift */; };
+		D8D81C8F251477F00049C87A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D81C8E251477F00049C87A /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		D896BA402513809C00DC50AB /* SimpleAppAnylineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppAnylineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D896BA442513809C00DC50AB /* SimpleAppAnylineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppAnylineUITests.swift; sourceTree = "<group>"; };
 		D896BA462513809C00DC50AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D896BA7A251393D800DC50AB /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		D896BA832513941E00DC50AB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		D896BA8B2513943900DC50AB /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		D896BA902513A61300DC50AB /* ListSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSearchBar.swift; sourceTree = "<group>"; };
+		D896BA962513A64C00DC50AB /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		D896BA9E2513ABFF00DC50AB /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		D896BAA32513B1F600DC50AB /* RequestUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUsers.swift; sourceTree = "<group>"; };
+		D8D81C8E251477F00049C87A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,12 @@
 		D896BA212513809B00DC50AB /* SimpleAppAnyline */ = {
 			isa = PBXGroup;
 			children = (
+				D896BA952513A63800DC50AB /* Model */,
+				D896BA822513940800DC50AB /* Network */,
+				D896BA79251393B200DC50AB /* ListComponents */,
+				D896BA582513824C00DC50AB /* Views */,
 				D896BA222513809B00DC50AB /* AppDelegate.swift */,
 				D896BA242513809B00DC50AB /* SceneDelegate.swift */,
-				D896BA262513809B00DC50AB /* ContentView.swift */,
 				D896BA282513809C00DC50AB /* Assets.xcassets */,
 				D896BA2D2513809C00DC50AB /* LaunchScreen.storyboard */,
 				D896BA302513809C00DC50AB /* Info.plist */,
@@ -134,6 +153,43 @@
 				D896BA462513809C00DC50AB /* Info.plist */,
 			);
 			path = SimpleAppAnylineUITests;
+			sourceTree = "<group>";
+		};
+		D896BA582513824C00DC50AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D896BA262513809B00DC50AB /* ContentView.swift */,
+				D8D81C8E251477F00049C87A /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D896BA79251393B200DC50AB /* ListComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D896BA7A251393D800DC50AB /* URLImage.swift */,
+				D896BA902513A61300DC50AB /* ListSearchBar.swift */,
+				D896BA9E2513ABFF00DC50AB /* ListCell.swift */,
+			);
+			path = ListComponents;
+			sourceTree = "<group>";
+		};
+		D896BA822513940800DC50AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D896BA832513941E00DC50AB /* ImageLoader.swift */,
+				D896BA8B2513943900DC50AB /* URLBuilder.swift */,
+				D896BAA32513B1F600DC50AB /* RequestUsers.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D896BA952513A63800DC50AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D896BA962513A64C00DC50AB /* ListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D896BA912513A61300DC50AB /* ListSearchBar.swift in Sources */,
 				D896BA232513809B00DC50AB /* AppDelegate.swift in Sources */,
 				D896BA252513809B00DC50AB /* SceneDelegate.swift in Sources */,
+				D896BA842513941E00DC50AB /* ImageLoader.swift in Sources */,
 				D896BA272513809B00DC50AB /* ContentView.swift in Sources */,
+				D8D81C8F251477F00049C87A /* DetailView.swift in Sources */,
+				D896BA7B251393D800DC50AB /* URLImage.swift in Sources */,
+				D896BA9F2513ABFF00DC50AB /* ListCell.swift in Sources */,
+				D896BA8C2513943900DC50AB /* URLBuilder.swift in Sources */,
+				D896BAA42513B1F600DC50AB /* RequestUsers.swift in Sources */,
+				D896BA972513A64C00DC50AB /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
