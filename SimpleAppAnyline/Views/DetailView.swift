@@ -13,17 +13,25 @@ struct DetailView: View {
     
     var body: some View {
         VStack{
-            URLImage(urlString: userData.avatar_url)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            if let url = URL(string: userData.avatar_url) {
+                URLImage(url: url)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            } else {
+                Image(systemName: "questionmark").resizable()
+            }
+            Text("Score: \(userData.score)").padding(.top, 20)
             Spacer()
             
+            
+            
+            
             if let url = URL(string: userData.html_url) {
-                Link("Send me to this guy page", destination: url)
+                Link("Send me to this person page", destination: url).padding(.bottom, 50)
             } else {
-                Text("This guy has no page o.O")
+                Text("This person has no page o.O").padding(.bottom, 50)
             }
-        }
+        }.navigationTitle(userData.login)
     }
 }
 
