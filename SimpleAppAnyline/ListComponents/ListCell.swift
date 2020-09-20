@@ -14,9 +14,14 @@ struct ListCell: View {
     var body: some View {
         VStack {
             HStack {
-                URLImage(urlString: listComponent.avatar_url)
-                    .frame(width: 50, height: 50, alignment: .center)
-                    .clipped()
+                if let url = URL(string: listComponent.avatar_url) {
+                    URLImage(url: url)
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .clipped()
+                } else {
+                    Image(systemName: "questionmark").resizable()
+                }
+                
                 Text(listComponent.login).bold()
                 Spacer()
             }

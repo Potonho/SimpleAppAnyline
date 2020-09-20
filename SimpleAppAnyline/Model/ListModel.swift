@@ -31,8 +31,9 @@ struct ListComponent: Hashable, Codable {
     var login: String
     var avatar_url : String
     var score : Int = 0
+    var html_url : String
     
     static func getDefaultListComponent() -> ListComponent {
-        return ListComponent(id: 1, login: "Potonho", avatar_url: "https://avatars2.githubusercontent.com/u/2460641?v=4", score: 1000)
+        return ListComponent(id: 1, login: "Potonho", avatar_url: "https://avatars2.githubusercontent.com/u/2460641?v=4", score: 1000, html_url: "https://github.com/potonho")
     }
 }

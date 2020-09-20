@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @ObservedObject var request = RequestUsers()
     
-    @State private var searchName: String = "potonho"
+    @State private var searchName: String = "thomas"
     @State private var showSearchBar = false
     
     var body: some View {
@@ -26,7 +26,7 @@ struct ContentView: View {
                         ListCell(listComponent: listComponent)
                     }
                 }
-                .navigationBarTitle(Text(searchName), displayMode: .inline)
+                .navigationBarTitle(Text("Github Users"), displayMode: .inline)
                 .navigationBarItems(leading:
                                         Button(action: animateSearchBar, label: {
                                             Text("New Search")
