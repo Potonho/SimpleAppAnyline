@@ -27,9 +27,9 @@ struct JsonPayload: Codable {
 }
 
 struct ListComponent: Hashable, Codable {
-    var id : Int?
-    var login: String = ""
-    var avatar_url : String = ""
+    var id : Int
+    var login: String
+    var avatar_url : String
     var score : Int = 0
     
     static func getDefaultListComponent() -> ListComponent {

@@ -6,39 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
 struct URLImage: View {
     
-    @ObservedObject private var loader: ImageLoader
+    @ObservedObject var imageLoader: ImageLoader
+      init(urlString: String) {
+        imageLoader = ImageLoader(url: URL(string: urlString)!)
+      }
     
-    init(urlString: String) {
-        loader = ImageLoader(urlString: urlString)
-    }
-    
-    var body: some View {
-        image
-            .clipped()
-            .onAppear(perform: loader.load)
-            .onDisappear(perform: loader.cancel)
-    }
-    
-    private var image: some View {
-        Group {
-            if loader.image != nil {
-                Image(uiImage: loader.image!)
-                    .resizable()
-                    .scaledToFit()
-            } else {
-                Image("placeholder")
-                .resizable()
-                .scaledToFit()
-            }
-        }
-    }
+      var body: some View {
+        imageLoader
+          .image
+          .map { Image(uiImage:$0).resizable() }
+      }
 }
 
 struct URLImage_Previews: PreviewProvider {
     static var previews: some View {
-        URLImage(urlString: "")
+        URLImage(urlString: "https://avatars2.githubusercontent.com/u/2460641?v=4")
     }
 }

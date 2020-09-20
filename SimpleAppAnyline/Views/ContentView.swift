@@ -25,7 +25,8 @@ struct ContentView: View {
                     NavigationLink(destination: DetailView(userData: listComponent)) {
                         ListCell(listComponent: listComponent)
                     }
-                }.navigationBarTitle(Text(searchName), displayMode: .inline)
+                }
+                .navigationBarTitle(Text(searchName), displayMode: .inline)
                 .navigationBarItems(leading:
                                         Button(action: animateSearchBar, label: {
                                             Text("New Search")
@@ -36,19 +37,6 @@ struct ContentView: View {
                                         })
                 )
                 
-                
-//                HStack() {
-//                    Button(action: sortList) {
-//                        Text("SORT")
-//                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-//                            .foregroundColor(Color.white)
-//                            .font(.title)
-//                    }
-//                    .background(Color.gray)
-//                    .frame(height: 44)
-//                    .frame(minWidth: 0, maxWidth: .infinity)
-//                    .padding(10)
-//                }
             }
         }
     }
@@ -60,7 +48,7 @@ struct ContentView: View {
     }
     
     func requestNewSearch() {
-        request.requestPhotosWithTag(with: searchName)
+        request.requestUsersWithQuery(with: searchName)
         if showSearchBar {
             animateSearchBar()
         }

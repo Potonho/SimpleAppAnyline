@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8241D0A251805E000D2D248 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8241D09251805E000D2D248 /* ImageCache.swift */; };
 		D896BA232513809B00DC50AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA222513809B00DC50AB /* AppDelegate.swift */; };
 		D896BA252513809B00DC50AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA242513809B00DC50AB /* SceneDelegate.swift */; };
 		D896BA272513809B00DC50AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896BA262513809B00DC50AB /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8241D09251805E000D2D248 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		D896BA1F2513809B00DC50AB /* SimpleAppAnyline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAppAnyline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D896BA222513809B00DC50AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D896BA242513809B00DC50AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				D896BA832513941E00DC50AB /* ImageLoader.swift */,
 				D896BA8B2513943900DC50AB /* URLBuilder.swift */,
 				D896BAA32513B1F600DC50AB /* RequestUsers.swift */,
+				D8241D09251805E000D2D248 /* ImageCache.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				D896BA842513941E00DC50AB /* ImageLoader.swift in Sources */,
 				D896BA272513809B00DC50AB /* ContentView.swift in Sources */,
 				D8D81C8F251477F00049C87A /* DetailView.swift in Sources */,
+				D8241D0A251805E000D2D248 /* ImageCache.swift in Sources */,
 				D896BA7B251393D800DC50AB /* URLImage.swift in Sources */,
 				D896BA9F2513ABFF00DC50AB /* ListCell.swift in Sources */,
 				D896BA8C2513943900DC50AB /* URLBuilder.swift in Sources */,
