@@ -22,7 +22,7 @@ class RequestUsers: ObservableObject {
         requestUsersWithQuery(with: tag)
     }
     
-    deinit {
+    func cancelSubscription() {
         cancellable?.cancel()
     }
     

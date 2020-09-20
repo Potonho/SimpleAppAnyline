@@ -179,10 +179,10 @@
 		D896BA822513940800DC50AB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D896BA832513941E00DC50AB /* ImageLoader.swift */,
 				D896BA8B2513943900DC50AB /* URLBuilder.swift */,
-				D896BAA32513B1F600DC50AB /* RequestUsers.swift */,
+				D896BA832513941E00DC50AB /* ImageLoader.swift */,
 				D8241D09251805E000D2D248 /* ImageCache.swift */,
+				D896BAA32513B1F600DC50AB /* RequestUsers.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
